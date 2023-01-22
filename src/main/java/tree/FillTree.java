@@ -9,7 +9,9 @@ public class FillTree {
         NodeTree left;
         NodeTree right;
 
-        NodeTree(int t) {}
+        NodeTree(int t) {
+            this.value = t;
+        }
     }
 
     int number;
@@ -31,11 +33,15 @@ public class FillTree {
         }
         NodeTree node = new NodeTree(t++);
 
+        node.left = buildTree(n / 2);
+        node.right = buildTree(n - n / 2 - 1);
+        return node;
+
     }
 
     public static void main(String[] args) {
-        NodeTree nodeTree = new NodeTree();
-        nodeTree.value = 10;
+        NodeTree nodeTree = buildTree(8);
+
         traverse(nodeTree, "");
     }
 
