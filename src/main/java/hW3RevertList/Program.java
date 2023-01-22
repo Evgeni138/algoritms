@@ -15,5 +15,16 @@ public class Program {
         System.out.println();
         list1.revert2();
         list1.printAll();
+
+        System.out.println();
+
+        ListOne listOne = new ListOne();
+        listOne.push(1);
+        listOne.push(2);
+        listOne.push(3);
+        listOne.push(4);
+
+        System.out.println("Односвязанный список: ");
+        listOne.printAll();
     }
 }

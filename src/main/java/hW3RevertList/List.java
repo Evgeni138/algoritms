@@ -1,10 +1,11 @@
 package hW3RevertList;
-
+// Двусвязанный список
 public class List {
     Node head;
     Node tail;
     Node next;
 
+    // Добавлнение элемента с головы
     public void push(int value) {
         Node node = new Node();
         node.value = value;
@@ -18,6 +19,8 @@ public class List {
         }
     }
 
+
+    // Добавление элемента с конца
     public void add(int value) {
         Node node = new Node();
         node.value = value;
@@ -31,6 +34,7 @@ public class List {
         }
     }
 
+    // Вывод в клнсоль всех элементов
     public void printAll() {
         Node node = head;
         while (node != null) {
@@ -39,6 +43,7 @@ public class List {
         }
     }
 
+    // Разворот элементов через создание нового списка
     public List revert() {
         List newList = new List();
         Node node = head;
@@ -49,6 +54,7 @@ public class List {
         return newList;
     }
 
+    // Рекурсивный разворот
     public void revert2() {
         Node currentNode = head;
         while (currentNode != null) {
