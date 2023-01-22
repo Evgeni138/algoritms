@@ -3,6 +3,7 @@ package hW3RevertList;
 public class List {
     Node head;
     Node tail;
+    Node next;
 
     public void push(int value) {
         Node node = new Node();
