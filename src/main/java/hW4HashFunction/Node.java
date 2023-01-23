@@ -1,5 +1,5 @@
 package hW4HashFunction;
-
+// Описание класса нод
 public class Node {
     String name;
     int tel;

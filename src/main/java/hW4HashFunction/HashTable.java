@@ -1,9 +1,8 @@
 package hW4HashFunction;
-
-import java.util.ArrayList;
-
+// Описание класса HashTable, в котором происходит заполнение и обрабока хэш-таблицы
 public class HashTable {
 
+    // Описывается хэш-функция, с помощью которой вычисляется индекс массива для заполнения хэш-таблицы
     public int hashFunction(int count, Node node) {
         int total = 0;
         String[] arr = node.name.split("");
@@ -13,6 +12,7 @@ public class HashTable {
         return total % count;
     }
 
+    // Функция, которая заполняет хэш-табдицу
     public NodeList[] fillHashTable(NodeList nodeList) {
         NodeList[] filledHashTable = new NodeList[nodeList.nodeArrayList.size()];
         for (Node node : nodeList.nodeArrayList) {
@@ -25,6 +25,7 @@ public class HashTable {
         return filledHashTable;
     }
 
+    // Функция вывода в консоль всех элементов хэш-таблицы
     public void printAllElementsHashTable(NodeList[] hashTable) {
         for (int i = 0; i < hashTable.length; i++) {
             if (hashTable[i] != null) {
@@ -35,6 +36,7 @@ public class HashTable {
         }
     }
 
+    // Функция поиска элемента в хэш-таблице по ключу
     public void findContact(String name, NodeList[] hashTable) {
         int index = 0;
         boolean flag = false;

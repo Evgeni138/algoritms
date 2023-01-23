@@ -1,5 +1,5 @@
 package hW4HashFunction;
-
+// Описание класса список нодов
 import java.util.ArrayList;
 
 public class NodeList {
